@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('send-message', 'ChatController@sendMessage');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
